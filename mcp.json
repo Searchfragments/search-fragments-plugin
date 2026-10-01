@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "search-fragments": {
+      "url": "https://searchfragments.com/api/mcp"
+    }
+  }
+}

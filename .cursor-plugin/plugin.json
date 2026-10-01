@@ -1,0 +1,14 @@
+{
+  "name": "search-fragments",
+  "version": "0.2.3",
+  "description": "Resolves half-remembered books, films, songs and people into a cited answer, a shortlist or a no.",
+  "author": {
+    "name": "Search Fragments",
+    "email": "hello@searchfragments.com"
+  },
+  "homepage": "https://searchfragments.com",
+  "repository": "https://github.com/Searchfragments/search-fragments-plugin",
+  "license": "MIT",
+  "keywords": ["search fragments", "searchfragments"],
+  "mcpServers": "./mcp.json"
+}
