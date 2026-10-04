@@ -1,0 +1,10 @@
+{
+  "name": "search-fragments",
+  "version": "0.2.4",
+  "description": "Resolves half-remembered books, films, songs and people into a cited answer, a shortlist or a no.",
+  "mcpServers": {
+    "search-fragments": {
+      "httpUrl": "https://searchfragments.com/api/mcp"
+    }
+  }
+}

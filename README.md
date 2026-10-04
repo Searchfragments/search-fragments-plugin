@@ -4,7 +4,7 @@ Resolves half-remembered books, films, songs and people into a cited answer, a s
 
 Search Fragments is a free, non-commercial prototype. No account needed.
 
-This repository only configures the hosted Search Fragments MCP server for Cursor and Grok Build. It contains no executable code.
+This repository only configures the hosted Search Fragments MCP server for Cursor, Grok Build and Gemini CLI. It contains no executable code.
 
 - MCP server: `https://searchfragments.com/api/mcp` (Streamable HTTP)
 - Tools: `resolve_fragment`, `verify_claim`, `submit_resolution_feedback`
@@ -16,3 +16,4 @@ This repository only configures the hosted Search Fragments MCP server for Curso
 
 - `.cursor-plugin/plugin.json` and `mcp.json`: Cursor plugin
 - `.grok-plugin/plugin.json` and `.mcp.json`: Grok Build plugin
+- `gemini-extension.json`: Gemini CLI extension (`gemini extensions install https://github.com/Searchfragments/search-fragments-plugin`)
