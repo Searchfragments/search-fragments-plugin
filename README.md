@@ -1,13 +1,13 @@
 # Search Fragments plugin
 
-Resolves half-remembered books, films, songs and people into a cited answer, a shortlist or a no.
+The gate before your agent answers: a verdict on whether a half-remembered thing can be reached. Call `gate_probe` first; `resolve_fragment` pieces the fragment together: Found, Leads or Not reachable.
 
 Search Fragments is a free, non-commercial prototype. No account needed.
 
 This repository only configures the hosted Search Fragments MCP server for Cursor, Grok Build and Gemini CLI. It contains no executable code.
 
 - MCP server: `https://searchfragments.com/api/mcp` (Streamable HTTP)
-- Tools: `resolve_fragment`, `verify_claim`, `submit_resolution_feedback`
+- Tools: `gate_probe` (call first), `resolve_fragment`, `verify_claim`, `submit_resolution_feedback`
 - Network: connects only to `searchfragments.com`. It reads no local files and needs no credentials.
 - Docs: https://searchfragments.com/docs
 - Privacy: https://searchfragments.com/privacy

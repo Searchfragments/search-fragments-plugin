@@ -1,7 +1,7 @@
 {
   "name": "search-fragments",
   "version": "0.2.3",
-  "description": "Resolves half-remembered books, films, songs and people into a cited answer, a shortlist or a no.",
+  "description": "The gate before your agent answers: a verdict on whether a half-remembered thing can be reached.",
   "author": {
     "name": "Search Fragments",
     "email": "hello@searchfragments.com"
