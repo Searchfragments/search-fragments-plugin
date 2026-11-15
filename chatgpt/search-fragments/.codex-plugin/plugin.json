@@ -1,6 +1,6 @@
 {
   "name": "search-fragments",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "description": "The gate before an answer: a verdict on whether a half-remembered thing (film, song, book, paper, quote, person, event) can be reached, before anyone guesses.",
   "author": {
     "name": "Search Fragments",
@@ -39,5 +39,62 @@
     "composerIcon": "./assets/icon.png",
     "logo": "./assets/logo.png",
     "supportURL": "https://searchfragments.com/docs"
+  },
+  "extensions": {
+    "com.openai": {
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "A film remembered only by its plot is identified with a quoted source.",
+              "prompt": "What's the animated film from around the 2000s where an old man ties thousands of balloons to his house and flies it to South America, and a kid scout stows away?",
+              "tools_triggered": "resolve_fragment (it runs the gate first; gate_probe may also be called)",
+              "expected_behavior": "Returns ORIGIN_OF_TRUTH naming Up (2009), with a quote from the source page describing the balloons and South America. ChatGPT answers Up and cites the source."
+            },
+            {
+              "description": "A research paper remembered by its result comes back with a full citation and DOI.",
+              "prompt": "Find the Nature paper from the mid 2010s where a program using deep neural networks and tree search beat a professional Go player.",
+              "tools_triggered": "resolve_fragment",
+              "expected_behavior": "Names 'Mastering the Game of Go with Deep Neural Networks and Tree Search' and gives the citation: Silver, Huang, Maddison et al. (2016), Nature, https://doi.org/10.1038/nature16961."
+            },
+            {
+              "description": "A paper given with its year returns the original paper's citation, not a later reprint.",
+              "prompt": "What's the 1948 Bell Labs paper that defined information as entropy and measured it in bits?",
+              "tools_triggered": "resolve_fragment",
+              "expected_behavior": "Names 'A Mathematical Theory of Communication' by C. E. Shannon (1948), Bell System Technical Journal, with DOI 10.1002/j.1538-7305.1948.tb01338.x, as the answer or the first lead."
+            },
+            {
+              "description": "A half-remembered person is answered quickly by the gate with a verbatim quote.",
+              "prompt": "Who was the doctor who figured out handwashing stopped mothers dying after childbirth but nobody believed him?",
+              "tools_triggered": "gate_probe or resolve_fragment",
+              "expected_behavior": "Returns a quick answer, Ignaz Semmelweis, with a quote copied from the source page. ChatGPT cites that page."
+            },
+            {
+              "description": "An invented research paper is declined, not made up.",
+              "prompt": "Find the 1970s Swedish study in Nature where dairy cows gave more milk when the farmer read them poetry every morning.",
+              "tools_triggered": "resolve_fragment",
+              "expected_behavior": "Returns NOT_REACHABLE. ChatGPT says Search Fragments could not place it and does not invent a paper, authors or a citation; it may ask for another detail."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Plain arithmetic is not a half-remembered thing; ChatGPT should answer directly without calling the plugin.",
+              "prompt": "What is 17 times 23?"
+            },
+            {
+              "description": "Creative writing is out of scope; the plugin should not be called and ChatGPT writes the poem itself.",
+              "prompt": "Write a short poem about autumn leaves."
+            },
+            {
+              "description": "Private information the plugin cannot see; ChatGPT should not call it, or if it does, must not invent an answer and should say it cannot know this.",
+              "prompt": "What did my landlord say in the email he sent me yesterday?"
+            }
+          ]
+        }
+      },
+      "publication": {
+        "release_notes": "First ChatGPT release. A verdict before the answer for half-remembered things: a quick quoted answer when one page names it, a full search with sources, leads to follow, or an honest 'not reachable'. Research papers come with a citation and DOI on an exact Crossref match. Also verifies specific claims and records whether a result was right."
+      }
+    }
   }
 }
