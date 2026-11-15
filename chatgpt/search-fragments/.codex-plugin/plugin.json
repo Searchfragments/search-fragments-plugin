@@ -1,6 +1,6 @@
 {
   "name": "search-fragments",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "description": "The gate before an answer: a verdict on whether a half-remembered thing (film, song, book, paper, quote, person, event) can be reached, before anyone guesses.",
   "author": {
     "name": "Search Fragments",
@@ -90,7 +90,8 @@
               "prompt": "What did my landlord say in the email he sent me yesterday?"
             }
           ]
-        }
+        },
+        "demo_recording_url": "https://searchfragments.com/demo/chatgpt-demo.gif"
       },
       "publication": {
         "release_notes": "First ChatGPT release. A verdict before the answer for half-remembered things: a quick quoted answer when one page names it, a full search with sources, leads to follow, or an honest 'not reachable'. Research papers come with a citation and DOI on an exact Crossref match. Also verifies specific claims and records whether a result was right."
