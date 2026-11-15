@@ -1,6 +1,6 @@
 {
   "name": "search-fragments",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "The gate before an answer: a verdict on whether a half-remembered thing (film, song, book, paper, quote, person, event) can be reached, before anyone guesses.",
   "author": {
     "name": "Search Fragments",
@@ -22,8 +22,8 @@
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Search Fragments",
-    "shortDescription": "Can a half-remembered thing be found? A verdict first.",
-    "longDescription": "Search Fragments is the gate before an answer. Give it something half-remembered (a film, song, book, research paper, quote, person or event you can't name) and it tells you first whether it can be reached.\n\n- Quick answer: one page names it, with a quote from that page to check.\n- Found: a full search found it and its evidence check passed, with sources. Papers come with a citation, and a DOI when Crossref holds an exact match.\n- Leads: real leads it could not confirm. Worth following, not an answer.\n- Not reachable: its search found nothing to continue from. Not a claim that it cannot be found elsewhere.\n\nBuilt to decline rather than guess, and we publish both directions. Gate, 80 graded questions (15 Nov 2026): 0 wrong quick answers; wrongly turned away 1 of 55 findable. Full search, 124 graded questions: wrongly asserted an answer on 0-2.4%; wrongly declined 40.8% of the findable ones.\n\nFree. No account needed.",
+    "shortDescription": "A verdict before the answer",
+    "longDescription": "Search Fragments is the gate before an answer. Give it something half-remembered (a film, song, book, research paper, quote, person or event you can't name) and it tells you first whether it can be reached.\n\n- Quick answer: one page names it, with a quote from that page to check.\n- Found: a full search found it and its evidence check passed, with sources. Papers come with a citation, and a DOI when Crossref holds an exact match.\n- Leads: real leads it could not confirm. Worth following, not an answer.\n- Not reachable: its search found nothing to continue from. Not a claim that it cannot be found elsewhere.\n\nBuilt to decline rather than guess, and we publish both directions. Gate, 80 graded questions (15 Nov 2026): 0 wrong quick answers; wrongly turned away 1 of 55 findable. Full search, 124 graded questions: wrongly asserted an answer on 0-2.4%; wrongly declined 40.8% of the findable ones.",
     "developerName": "Search Fragments",
     "category": "Education & Research",
     "capabilities": [],
@@ -37,6 +37,7 @@
     ],
     "brandColor": "#1F1F1F",
     "composerIcon": "./assets/icon.png",
-    "logo": "./assets/logo.png"
+    "logo": "./assets/logo.png",
+    "supportURL": "https://searchfragments.com/docs"
   }
 }
