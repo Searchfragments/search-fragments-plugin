@@ -94,7 +94,7 @@
         "demo_recording_url": "https://searchfragments.com/demo/chatgpt-demo.gif"
       },
       "publication": {
-        "release_notes": "First ChatGPT release. A verdict before the answer for half-remembered things: a quick quoted answer when one page names it, a full search with sources, leads to follow, or an honest 'not reachable'. Research papers come with a citation and DOI on an exact Crossref match. Also verifies specific claims and records whether a result was right. 0.2.12: corrects the gate count in the description (1 wrong quick answer in 40, not 46)."
+        "release_notes": "First ChatGPT release. A verdict before the answer for half-remembered things: a quick quoted answer when one page names it, a full search with sources, leads to follow, or an honest 'not reachable'. Research papers come with a citation and DOI on an exact Crossref match. Also verifies specific claims and records whether a result was right. 0.2.12: corrects the gate count in the description (1 wrong quick answer in 40, not 46). No sign-in: the server is open to anonymous use, so this version uses no authentication and needs no account, credentials or consent step."
       }
     }
   }
